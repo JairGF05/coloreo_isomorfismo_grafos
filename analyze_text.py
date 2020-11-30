@@ -1,9 +1,9 @@
 import nltk
 import string
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import plotly.express as px
+#import matplotlib.pyplot as plt
+#import numpy as np
+#import pandas as pd
+#import plotly.express as px
 from nltk import SnowballStemmer
 from nltk.corpus import stopwords#palabras cerradas
 import networkx as nx
@@ -152,7 +152,7 @@ def get_color_for_node(G, node, colors_of_nodes, colors):
       return color
 
 #funcion que colorea grafos
-def coloreo_grafos(G, partag, bigramas_texto):
+def coloreo_grafos(G, partag, bigramas_texto, nombre):
   #definiendo lista de colores
   colors = ['Red', 'Blue', 'Green', 'Yellow',  'Black', 'Pink', 'Orange', 'White', 'Gray', 'Purple', 'Brown', 'Navy']
   #lista = [(1,5),(1,3),(1,2),(1,4),(4,5),(1,5),(5,6),(1,6)]
@@ -165,7 +165,7 @@ def coloreo_grafos(G, partag, bigramas_texto):
 
   #pintando primer grafo con graphviz
   #creando nodos y pintandolos
-  g = Digraph('G', filename='grafo.gv')
+  g = Digraph('G', filename=nombre)
   g.attr(rankdir="LR")
 
   for nodo,color in colors_of_nodes.items():

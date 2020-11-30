@@ -289,7 +289,7 @@ class Ui_MainWindow(object):
                 self.conexo_1.setText("No es conexo")
             else:
                 self.conexo_1.setText("Si es conexo")
-            coloreo_grafos(g, auxpartag, bigramas_texto)
+            coloreo_grafos(g, auxpartag, bigramas_texto,'grafo1.gv')
             archivo.close()
     
     def importar_texto_2(self):
@@ -360,7 +360,7 @@ class Ui_MainWindow(object):
                 self.conexo_2.setText("No es conexo")
             else:
                 self.conexo_2.setText("Si es conexo")
-            coloreo_grafos(g, auxpartag, bigramas_texto)
+            coloreo_grafos(g, auxpartag, bigramas_texto,'grafo2.gv')
             archivo.close()
 
 
