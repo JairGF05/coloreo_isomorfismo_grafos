@@ -7,9 +7,12 @@ import string
 from nltk import SnowballStemmer
 from nltk.corpus import stopwords#palabras cerradas
 import networkx as nx
+from nltk.corpus.reader.chasen import test
 from nltk.util import bigrams
 from graphviz import Digraph
 from graphviz import Source
+from collections import Counter
+from itertools import groupby
 
 
 def tokenizar_texto(texto):# de manera normal solo separa en tokens sin ningun tipo de filtro excepto las minus
@@ -151,6 +154,9 @@ def get_color_for_node(G, node, colors_of_nodes, colors):
     if coloring(G, node, color, colors_of_nodes): 
       return color
 
+
+  
+
 #funcion que colorea grafos
 def coloreo_grafos(G, partag, bigramas_texto, nombre):
   #definiendo lista de colores
@@ -163,6 +169,26 @@ def coloreo_grafos(G, partag, bigramas_texto, nombre):
   for node in G.nodes():
       colors_of_nodes[node] = get_color_for_node(G, node, colors_of_nodes, colors)
 
+  colores = []
+  for color in colors_of_nodes.values():
+    colores.append(color)
+  
+  freq = {} 
+  for item in colores: 
+    if (item in freq): 
+        freq[item] += 1
+    else: 
+        freq[item] = 1
+
+  numero_cromatico = len(freq.values())
+
+  # for frecuencia in freq.values():
+  #   color_cromatico += frecuencia
+
+
+
+  
+
   #pintando primer grafo con graphviz
   #creando nodos y pintandolos
   g = Digraph('G', filename=nombre)
@@ -174,6 +200,10 @@ def coloreo_grafos(G, partag, bigramas_texto, nombre):
   #ahora hacer esto en un ciclo para evitar las delclaraciones
   for a,b in bigramas_texto:
     subtag = partag.pop(0)
-    g.edge(str(a), str(b),label=subtag)   
-
+    g.edge(str(a), str(b),label=subtag)  
   g.view()
+
+  return numero_cromatico
+ 
+
+
