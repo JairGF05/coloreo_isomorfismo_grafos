@@ -124,34 +124,34 @@ class Ui_MainWindow(object):
         self.grados_1 = QtWidgets.QTextEdit(self.centralwidget)
         self.grados_1.setGeometry(QtCore.QRect(140, 261, 250, 80))
         self.grados_1.setObjectName("grados_1")
-        self.grados_1.setEnabled(False)
+        self.grados_1.setEnabled(True)
 
         self.grados_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.grados_2.setGeometry(QtCore.QRect(395, 261, 250, 80))
         self.grados_2.setObjectName("grados_2")
-        self.grados_2.setEnabled(False)
+        self.grados_2.setEnabled(True)
 
         #aqui es donde se muestra si tiene circuito euleriano
         self.eulerian_1 = QtWidgets.QTextEdit(self.centralwidget)
         self.eulerian_1.setGeometry(QtCore.QRect(140, 351, 250, 80))
         self.eulerian_1.setObjectName("eulerian_1")
-        self.eulerian_1.setEnabled(False)
+        self.eulerian_1.setEnabled(True)
 
         self.eulerian_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.eulerian_2.setGeometry(QtCore.QRect(395, 351, 250, 80))
         self.eulerian_2.setObjectName("eulerian_2")
-        self.eulerian_2.setEnabled(False)
+        self.eulerian_2.setEnabled(True)
 
          #aqui es donde se muestra si tiene circuito euleriano
         self.eulerian_path_1 = QtWidgets.QTextEdit(self.centralwidget)
         self.eulerian_path_1.setGeometry(QtCore.QRect(140, 441, 250, 80))
         self.eulerian_path_1.setObjectName("eulerian_path_1")
-        self.eulerian_path_1.setEnabled(False)
+        self.eulerian_path_1.setEnabled(True)
 
         self.eulerian_path_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.eulerian_path_2.setGeometry(QtCore.QRect(395, 441, 250, 80))
         self.eulerian_path_2.setObjectName("eulerian_path_2")
-        self.eulerian_path_2.setEnabled(False)
+        self.eulerian_path_2.setEnabled(True)
 
          #aqui es donde se muestra si es conexo
         self.conexo_1 = QtWidgets.QLineEdit(self.centralwidget)
