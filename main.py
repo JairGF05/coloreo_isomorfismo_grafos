@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(700, 700)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         
@@ -64,7 +64,7 @@ class Ui_MainWindow(object):
 
         #esta es la etiqueta de euleriano
         self.eulerian = QtWidgets.QLabel(self.centralwidget)
-        self.eulerian.setGeometry(QtCore.QRect(40, 301, 101, 31))
+        self.eulerian.setGeometry(QtCore.QRect(40, 351, 101, 31))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(14)
@@ -73,7 +73,7 @@ class Ui_MainWindow(object):
 
         #esta es la etiqueta de camino euleriano
         self.eulerian_path = QtWidgets.QLabel(self.centralwidget)
-        self.eulerian_path.setGeometry(QtCore.QRect(40, 341, 101, 31))
+        self.eulerian_path.setGeometry(QtCore.QRect(40, 441, 101, 31))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(14)
@@ -82,86 +82,109 @@ class Ui_MainWindow(object):
         
          #esta es la etiqueta conexo
         self.conexo = QtWidgets.QLabel(self.centralwidget)
-        self.conexo.setGeometry(QtCore.QRect(40, 381, 101, 31))
+        self.conexo.setGeometry(QtCore.QRect(40, 531, 101, 31))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(14)
         self.conexo.setFont(font)
         self.conexo.setObjectName("conexo:")
 
+         #esta es la etiqueta no_cromatico
+        self.cromatico = QtWidgets.QLabel(self.centralwidget)
+        self.cromatico.setGeometry(QtCore.QRect(40, 571, 101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(14)
+        self.cromatico.setFont(font)
+        self.cromatico.setObjectName("cromatico:")
+
         #aqui es donde se muestra los nodos
         self.no_nodos_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.no_nodos_1.setGeometry(QtCore.QRect(140, 180, 200, 31))
+        self.no_nodos_1.setGeometry(QtCore.QRect(140, 180, 250, 31))
         self.no_nodos_1.setObjectName("no_nodos_1")
         self.no_nodos_1.setEnabled(False)
 
         self.no_nodos_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.no_nodos_2.setGeometry(QtCore.QRect(345, 180, 200, 31))
+        self.no_nodos_2.setGeometry(QtCore.QRect(395, 180, 250, 31))
         self.no_nodos_2.setObjectName("no_nodos_2")
         self.no_nodos_2.setEnabled(False)
         
         #aqui es donde se muestra los arcos
         self.no_arcos_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.no_arcos_1.setGeometry(QtCore.QRect(140, 221, 200, 31))
+        self.no_arcos_1.setGeometry(QtCore.QRect(140, 221, 250, 31))
         self.no_arcos_1.setObjectName("no_arcos_1")
         self.no_arcos_1.setEnabled(False)
 
         self.no_arcos_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.no_arcos_2.setGeometry(QtCore.QRect(345, 221, 200, 31))
+        self.no_arcos_2.setGeometry(QtCore.QRect(395, 221, 250, 31))
         self.no_arcos_2.setObjectName("no_arcos_2")
         self.no_arcos_2.setEnabled(False)
 
          #aqui es donde se muestra los grados
-        self.grados_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.grados_1.setGeometry(QtCore.QRect(140, 261, 200, 31))
+        self.grados_1 = QtWidgets.QTextEdit(self.centralwidget)
+        self.grados_1.setGeometry(QtCore.QRect(140, 261, 250, 80))
         self.grados_1.setObjectName("grados_1")
         self.grados_1.setEnabled(False)
 
-        self.grados_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.grados_2.setGeometry(QtCore.QRect(345, 261, 200, 31))
+        self.grados_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.grados_2.setGeometry(QtCore.QRect(395, 261, 250, 80))
         self.grados_2.setObjectName("grados_2")
         self.grados_2.setEnabled(False)
 
         #aqui es donde se muestra si tiene circuito euleriano
-        self.eulerian_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.eulerian_1.setGeometry(QtCore.QRect(140, 301, 200, 31))
+        self.eulerian_1 = QtWidgets.QTextEdit(self.centralwidget)
+        self.eulerian_1.setGeometry(QtCore.QRect(140, 351, 250, 80))
         self.eulerian_1.setObjectName("eulerian_1")
         self.eulerian_1.setEnabled(False)
 
-        self.eulerian_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.eulerian_2.setGeometry(QtCore.QRect(345, 301, 200, 31))
+        self.eulerian_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.eulerian_2.setGeometry(QtCore.QRect(395, 351, 250, 80))
         self.eulerian_2.setObjectName("eulerian_2")
         self.eulerian_2.setEnabled(False)
 
          #aqui es donde se muestra si tiene circuito euleriano
-        self.eulerian_path_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.eulerian_path_1.setGeometry(QtCore.QRect(140, 341, 200, 31))
+        self.eulerian_path_1 = QtWidgets.QTextEdit(self.centralwidget)
+        self.eulerian_path_1.setGeometry(QtCore.QRect(140, 441, 250, 80))
         self.eulerian_path_1.setObjectName("eulerian_path_1")
         self.eulerian_path_1.setEnabled(False)
 
-        self.eulerian_path_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.eulerian_path_2.setGeometry(QtCore.QRect(345, 341, 200, 31))
+        self.eulerian_path_2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.eulerian_path_2.setGeometry(QtCore.QRect(395, 441, 250, 80))
         self.eulerian_path_2.setObjectName("eulerian_path_2")
         self.eulerian_path_2.setEnabled(False)
 
          #aqui es donde se muestra si es conexo
         self.conexo_1 = QtWidgets.QLineEdit(self.centralwidget)
-        self.conexo_1.setGeometry(QtCore.QRect(140, 381, 200, 31))
+        self.conexo_1.setGeometry(QtCore.QRect(140, 531, 250, 31))
         self.conexo_1.setObjectName("conexo_1")
         self.conexo_1.setEnabled(False)
 
         self.conexo_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.conexo_2.setGeometry(QtCore.QRect(345, 381, 200, 31))
+        self.conexo_2.setGeometry(QtCore.QRect(395, 531, 250, 31))
         self.conexo_2.setObjectName("conexo_2")
         self.conexo_2.setEnabled(False)
 
+           #aqui es donde se muestra no cromatico
+        self.cromatico_1 = QtWidgets.QLineEdit(self.centralwidget)
+        self.cromatico_1.setGeometry(QtCore.QRect(140, 571, 250, 31))
+        self.cromatico_1.setObjectName("cromatico_1")
+        self.cromatico_1.setEnabled(False)
+
+        self.cromatico_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.cromatico_2.setGeometry(QtCore.QRect(395, 571, 250, 31))
+        self.cromatico_2.setObjectName("cromatico_2")
+        self.cromatico_2.setEnabled(False)
+
+
         #boton iniciar
+        ''''
         self.iniciar = QtWidgets.QPushButton(self.centralwidget)
         self.iniciar.setGeometry(QtCore.QRect(40, 540, 75, 25))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.iniciar.setFont(font)
         self.iniciar.setObjectName("Iniciar")
+        '''
 
         #boton importar ejemplo
         self.importar_1 = QtWidgets.QPushButton(self.centralwidget)
@@ -217,7 +240,8 @@ class Ui_MainWindow(object):
         self.eulerian.setText(_translate("MainWindow", "Cir. Euler: "))
         self.eulerian_path.setText(_translate("MainWindow", "Cam. Euler: "))
         self.conexo.setText(_translate("MainWindow", "Conexo: "))
-        self.iniciar.setText(_translate("MainWindow", "Iniciar"))
+        self.cromatico.setText(_translate("MainWindow", "No. Crom: "))
+        #self.iniciar.setText(_translate("MainWindow", "Iniciar"))
         self.importar_1.setText(_translate("MainWindow", "Importar texto 1"))
         self.importar_2.setText(_translate("MainWindow", "Importar texto 2"))
 
@@ -289,8 +313,8 @@ class Ui_MainWindow(object):
                 self.conexo_1.setText("No es conexo")
             else:
                 self.conexo_1.setText("Si es conexo")
-            numero_cromatico1=coloreo_grafos(g, auxpartag, bigramas_texto,'grafo1.gv')
-            print(numero_cromatico1)
+            numero_cromatico=coloreo_grafos(g, auxpartag, bigramas_texto,'grafo1.gv')
+            self.cromatico_1.setText(str(numero_cromatico))
             archivo.close()
     
     def importar_texto_2(self):
@@ -361,8 +385,8 @@ class Ui_MainWindow(object):
                 self.conexo_2.setText("No es conexo")
             else:
                 self.conexo_2.setText("Si es conexo")
-            numero_cromatico2=coloreo_grafos(g, auxpartag, bigramas_texto,'grafo2.gv')
-            print(numero_cromatico2)
+            numero_cromatico=coloreo_grafos(g, auxpartag, bigramas_texto,'grafo2.gv')
+            self.cromatico_2.setText(str(numero_cromatico))
             archivo.close()
 
 
