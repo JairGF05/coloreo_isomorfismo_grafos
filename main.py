@@ -13,15 +13,15 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(700, 700)
+        MainWindow.resize(930, 880)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         
         #en este label va la imagen de fondo
         self.background = QtWidgets.QLabel(self.centralwidget)
-        self.background.setGeometry(QtCore.QRect(0, 0, 791, 581))
+        self.background.setGeometry(QtCore.QRect(0, 0, 1000, 1500))
         self.background.setText("")
-        self.background.setPixmap(QtGui.QPixmap("tree.jpg"))
+        self.background.setPixmap(QtGui.QPixmap("book.jpg"))
         self.background.setScaledContents(True)
         self.background.setObjectName("background")
         
